@@ -1,20 +1,134 @@
 {% extends 'base.html' %}
 
 {% block head %}
+    <title>Search Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Additional CSS styles for the card layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
 
-<title>Search Page</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        .header {
+            background-color: #10ad4f;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form {
+            margin-bottom: 20px;
+        }
+
+        .form input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #16a920;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .form input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #18a318;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form input[type="submit"]:hover {
+            background-color: #1c4d80;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 80px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px;
+            max-width: 600px;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #19ca3f;
+        }
+
+        .card p {
+            text-align: center;
+            color: #444444;
+        }
+
+        .footer {
+            background-color: #336699;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
 {% endblock %}
 
 {% block body %}
-<div class="content">
-    <h1 style="text-align: center">Search</h1>
-
-    <div class="form">
-        <form action="/review" method="POST">
-            <input type="text" name="content" id="content">
-            <input type="submit" value="Search">
-        </form>
+    <div class="header">
+        <h1>Search for Reviews</h1>
     </div>
-</div>
+
+    <div class="content">
+        <div class="form">
+            <form action="/review" method="POST">
+                <input type="text" name="content" id="content" placeholder="Enter your search query">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <h2>About Web Scraping</h2>
+                <p>
+                    Web scraping is the process of extracting data from websites. It allows you to gather information from various sources on the web and use it for analysis, research, or any other purpose.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>About the Developer</h2>
+                <p>
+                    Hi there! I'm Om Bade, a web developer and data enthusiast. I love working with Python and building web applications like this one. Feel free to connect with me on LinkedIn and check out my projects on GitHub!
+                </p>
+                <div style="text-align: center;">
+                    <a href="https://github.com/ombade" target="_blank">GitHub</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://www.linkedin.com/in/om-bade-1633081a5/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ombade" target="_blank">GitHub</a>
+    </div>
 {% endblock %}
