@@ -46,7 +46,7 @@ Special thanks to Ayush Pujari for his exceptional problem-solving skills. Your 
 
 I invite you all to check out the live version of my project at: http://webscrapingflikart-env.eba-3ddsmpz3.us-east-1.elasticbeanstalk.com/
 
-For those who are interested in exploring the technical details and code implementation, feel free to visit my GitHub repository: [[GitHub Repo](https://your-github-repo-url.com)](https://github.com/ombade)
+For those who are interested in exploring the technical details and code implementation, feel free to visit my GitHub repository: https://github.com/ombade
 
 ## Get Inspired!
 
